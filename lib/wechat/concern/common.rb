@@ -133,7 +133,8 @@ module Wechat
       end
 
       def material(media_id)
-        get 'material/get', params: { media_id: media_id }, as: :file
+        #get 'material/get', params: { media_id: media_id }, as: :file
+        post 'material/get_material', params: {media_id: media_id}, as: :file
       end
 
       def material_count
